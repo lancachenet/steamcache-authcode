@@ -7,3 +7,4 @@ ENV \
 COPY src/ /var/www/html/
 RUN \
     mkdir /var/secrets
+VOLUME /var/secrets
