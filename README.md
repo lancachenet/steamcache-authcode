@@ -9,7 +9,7 @@ This wraps up the [Steam 2FA Server](https://github.com/DoctorMcKay/steam-twofac
 ### Pre-requisites
 By default this is very insecure. You should not use this for a Steam Account you care about as anyone could use this webservice. If you are using this for running a Site License Server then you can just use a new Steam Account for it and there will be no risk.
 
-You will need to obtain the JSON token from an authenticator. The easiest way to do this is to use the [Steam Desktop Authenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator). When you complete the process, there is a `maFiles` directory. The `.maFile` in here is your JSON secret. Rename it to your `<username>.json`.
+You will need to obtain the JSON token from an authenticator. The easiest way to do this is to use the [Steam Desktop Authenticator](https://github.com/Jessecar96/SteamDesktopAuthenticator). When you complete the process, there is a `maFiles` directory. The `.maFile` in here is your JSON secret. Rename it to your `username.json`.
 
 The container requires a volume mounted for secrets. This should be mounted to /var/secrets inside the container and it should have your username JSON files in it. This should be kept as secure as possible.
 
@@ -36,7 +36,7 @@ The following variables are supported to allow configuration:
 
 ### Getting a code
 
-Just make a request to http://<address>/index.php/code/<username> to fetch the code for the user. For all other usage, please check [the documentation](https://github.com/DoctorMcKay/steam-twofactor-server).
+Just make a request to http://`address`/index.php/code/`username` to fetch the code for the user. For all other usage, please check [the documentation](https://github.com/DoctorMcKay/steam-twofactor-server).
 
 ## License
 
