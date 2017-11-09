@@ -18,10 +18,11 @@ The container requires a volume mounted for secrets. This should be mounted to /
 To run the container, it's quite simple:
 
 ```
-docker run --restart=unless-stopped \
+docker run \
+    --restart=unless-stopped \
     --name steamcache-authcode \
-    -p 80:80
-    -v /data/secrets:/var/secrets
+    -p 80:80 \
+    -v /data/secrets:/var/secrets \
     mintopia/steamcache-authcode:latest
 ```
 
