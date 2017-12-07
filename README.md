@@ -23,7 +23,7 @@ docker run \
     --name steamcache-authcode \
     -p 80:80 \
     -v /data/secrets:/var/secrets \
-    mintopia/steamcache-authcode:latest
+    steamcache/steamcache-authcode:latest
 ```
 
 In this example, the path `/data/secrets` on the host will be mapped to the secrets directory in the container.
