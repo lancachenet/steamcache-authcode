@@ -24,7 +24,7 @@ docker run \
     -p 80:80 \
     -d \
     -v /data/secrets:/var/secrets \
-    steamcache/steamcache-authcode:latest
+    lancachenet/steamcache-authcode:latest
 ```
 
 In this example, the path `/data/secrets` on the host will be mapped to the secrets directory in the container.
