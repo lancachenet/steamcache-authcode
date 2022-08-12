@@ -106,7 +106,7 @@ class SteamTotp {
 
         $code = '';
         for ($i = 0; $i < self::CODE_LENGTH; $i++) {
-            $code .= substr(self::CHARSET, $fullcode % strlen(self::CHARSET), 1);
+            $code .= substr(self::CHARSET, (int) $fullcode % strlen(self::CHARSET), 1);
             $fullcode /= strlen(self::CHARSET);
         }
 
